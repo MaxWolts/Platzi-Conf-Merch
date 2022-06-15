@@ -15,8 +15,9 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-        env: REACT_APP_PAYPAL_ID: ${{secrets.REACT_APP_PAYPAL_ID}}
-        REACT_APP_POSITIONSTACK: ${{secrets.REACT_APP_POSITIONSTACK}}
+        env: 
+          REACT_APP_PAYPAL_ID: ${{secrets.REACT_APP_PAYPAL_ID}}
+          REACT_APP_POSITIONSTACK: ${{secrets.REACT_APP_POSITIONSTACK}}
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
