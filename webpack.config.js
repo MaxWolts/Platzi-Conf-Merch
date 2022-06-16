@@ -52,17 +52,16 @@ module.exports = {
       filename: 'assets/[name].css',
     }),
     new Dotenv({
-      path: './.env',
 			safe: true,
 			systemvars: true,
 			defaults: false,
     }),
-    // new webpack.DefinePlugin({
-		// 	'process.env': {
-		// 		REACT_APP_PAYPAL_ID: JSON.stringify(process.env.REACT_APP_PAYPAL_ID),
-		// 		REACT_APP_POSITIONSTACK: JSON.stringify(process.env.REACT_APP_POSITIONSTACK),
-		// 	},
-		// })
+    new webpack.DefinePlugin({
+			'process.env': {
+				REACT_APP_PAYPAL_ID: JSON.stringify(process.env.REACT_APP_PAYPAL_ID),
+				REACT_APP_POSITIONSTACK: JSON.stringify(process.env.REACT_APP_POSITIONSTACK),
+			},
+		})
   ],
   devServer: {
     historyApiFallback: true,
