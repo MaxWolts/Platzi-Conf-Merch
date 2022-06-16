@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 import AppContext from '../context/AppContext';
 import '../styles/components/Payment.css';
+import Meta from '../components/Meta';
 
 function Payment() {
   const { state, addNewOrder } = useContext(AppContext);
@@ -26,6 +27,8 @@ function Payment() {
   }
 
   return (
+    <>
+    <Meta title="Pedido"/>
     <div className="Payment">
       <div className="Payment-content">
         <h3>Resumen del pedido</h3>
@@ -71,6 +74,7 @@ function Payment() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

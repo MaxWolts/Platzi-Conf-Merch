@@ -1,10 +1,14 @@
 import React from 'react';
+import Meta from '../components/Meta';
 import initialState from "../initialState";
 import Products from "../components/Products";
 
 function Home() {
   return (
-    <Products products={initialState.products}/>
+    <>
+      <Meta title="Productos"/>
+      <Products products={initialState.products} />
+    </>
   );
 }
 

@@ -34,15 +34,15 @@ function Information() {
         </div>
         <div className="Information-form">
           <form ref={ form }>
-            <input type="text" placeholder='Nombre completo' name='name' />
-            <input type="text" placeholder='Correo Electronico' name='email' />
-            <input type="text" placeholder='Dirección' name='address' />
-            <input type="text" placeholder='Apto' name='apto' />
-            <input type="text" placeholder='Ciudad' name='city' />
-            <input type="text" placeholder='Pais' name='country' />
-            <input type="text" placeholder='Estado' name='state' />
-            <input type="text" placeholder='Código postal' name='cp' />
-            <input type="text" placeholder='Telefono' name='phone' />
+            <input type="text" placeholder='Nombre completo' name='name' required/>
+            <input type="email" placeholder='Correo Electronico' name='email' required/>
+            <input type="text" placeholder='Dirección' name='address' required/>
+            <input type="number" placeholder='Apto' name='apto' required/>
+            <input type="text" placeholder='Ciudad' name='city' required/>
+            <input type="text" placeholder='Pais' name='country' required/>
+            <input type="text" placeholder='Estado' name='state' required/>
+            <input type="number" placeholder='Código postal' name='cp' required/>
+            <input type="number" placeholder='Telefono' name='phone' required/>
           </form>
         </div>
         <div className="Information-buttons">
