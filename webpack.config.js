@@ -1,5 +1,6 @@
 const path = require('path');
-const Dotenv = require('dotenv-webpack');
+// const Dotenv = require('dotenv-webpack');
+require('dotenv').config();
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -51,16 +52,14 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
     }),
-    new Dotenv({
-			safe: true,
-			systemvars: true,
-			defaults: false,
-    }),
+    // new Dotenv({
+		// 	safe: true,
+		// 	systemvars: true,
+		// 	defaults: false,
+    // }),
     new webpack.DefinePlugin({
-			'process.env': {
-				REACT_APP_PAYPAL_ID: JSON.stringify(process.env.REACT_APP_PAYPAL_ID),
-				REACT_APP_POSITIONSTACK: JSON.stringify(process.env.REACT_APP_POSITIONSTACK),
-			},
+			'process.env.REACT_APP_PAYPAL_ID': JSON.stringify(process.env.REACT_APP_PAYPAL_ID),
+      'process.env.REACT_APP_POSITIONSTACK': JSON.stringify(process.env.REACT_APP_POSITIONSTACK),
 		})
   ],
   devServer: {
