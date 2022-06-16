@@ -4,6 +4,7 @@ require('dotenv').config();
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -60,7 +61,14 @@ module.exports = {
     new webpack.DefinePlugin({
 			'process.env.REACT_APP_PAYPAL_ID': JSON.stringify(process.env.REACT_APP_PAYPAL_ID),
       'process.env.REACT_APP_POSITIONSTACK': JSON.stringify(process.env.REACT_APP_POSITIONSTACK),
-		})
+		}),
+    new CopyPlugin({
+      patterns: [
+        { from: 'public/manifest.json', to: '' },
+        { from: 'public/service-worker.js', to: '' },
+        { from: 'public/icon.svg', to: 'assets' },
+      ],
+    }),
   ],
   devServer: {
     historyApiFallback: true,
