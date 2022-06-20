@@ -1,6 +1,9 @@
 .Success {
   margin: 0 0 4em 0;
 }
+.Success-conent {
+  padding: 2rem;
+}
 .Success-map {
   margin: 10px 0 0 0;
 }

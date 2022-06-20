@@ -8,8 +8,8 @@ import '../styles/components/Success.css';
 function Success() {
   const { state } = useContext(AppContext);
   const { buyer } = state;
+  const {name} = buyer[0];
   const location = useGoogleAddresss(buyer[0]);
-  const { name } = buyer
   return (
     <>
     <Meta title="Pedido Realizado"/>

@@ -7,7 +7,7 @@ import '../styles/components/Map.css';
 function Map({ data }) {
   const defaultCenter = [data.lat, data.lng];
   return (
-    <MapContainer center={defaultCenter} zoom={1}>
+    <MapContainer center={defaultCenter} zoom={2}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
