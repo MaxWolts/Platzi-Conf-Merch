@@ -58,6 +58,7 @@ a {
 }
 @media (max-width: 830px) {
   .Checkout {
+    justify-content: center;
     grid-template-columns: repeat(auto-fill, 18rem);
   }
 }
